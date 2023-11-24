@@ -8,7 +8,7 @@ mongo = PyMongo(app)
 CORS(app)
 db = mongo.db
 
-@app.route("/notes", methods = ['GET', 'POST'])
+@app.route("/", methods = ['GET', 'POST'])
 def notes():
     if request.method == 'GET':
         notes_cursor = db.notes.find()
